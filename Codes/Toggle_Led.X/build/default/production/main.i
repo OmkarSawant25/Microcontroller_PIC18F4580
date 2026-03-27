@@ -18008,19 +18008,21 @@ unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 # 34 "C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\\pic\\include/xc.h" 2 3
 # 10 "main.c" 2
-
+# 42 "main.c"
 void main(void) {
-    unsigned int delay = 0;
 
     TRISB = 0x00;
-    PORTB = 0x00;
+    PORTB = 0x01;
 
-    while(1)
-    {
-        if(delay++ == 50000)
-        {
+    int delay = 0;
+    while (1) {
+        delay++;
+        if (delay < 900) {
+            PORTBbits.RB0 = 0;
+        } else if (delay < 1000) {
+            PORTBbits.RB0 = 1;
+        } else {
             delay = 0;
-            PORTB = ~PORTB;
         }
     }
     return;

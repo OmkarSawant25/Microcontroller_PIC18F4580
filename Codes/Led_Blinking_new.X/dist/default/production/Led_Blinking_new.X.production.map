@@ -6,17 +6,17 @@ Linker command line:
   --edf=C:\Program Files\Microchip\xc8\v3.10\pic\dat\20250813170317_en.msgs \
   -cn -h+dist/default/production\Led_Blinking_new.X.production.sym \
   --cmf=dist/default/production\Led_Blinking_new.X.production.cmf -z \
-  -Q18F4580 -oC:\Users\OMKARS~1\AppData\Local\Temp\xcAsc94.0\driver_tmp_3.o \
+  -Q18F4580 -oC:\Users\OMKARS~1\AppData\Local\Temp\xcAsfhk.0\driver_tmp_3.o \
   --defsym=__MPLAB_BUILD=1 --fixupoverflow=error \
   -Mdist/default/production/Led_Blinking_new.X.production.map \
-  --md=C:\Users\OMKARS~1\AppData\Local\Temp\xcAsc94.0\driver_tmp_0.dat -E1 \
-  -ver=XC8 Compiler -ACODE=00h-07FFFh -ACONST=00h-07FFFh \
-  -ASMALLCONST=0600h-06FFhx122 -AMEDIUMCONST=0600h-07FFFh -ACOMRAM=01h-05Fh \
-  -AABS1=00h-05FFh -ABIGRAM=01h-05FFh -ARAM=060h-0FFh,0100h-01FFhx5 \
-  -ABANK0=060h-0FFh -ABANK1=0100h-01FFh -ABANK2=0200h-02FFh \
-  -ABANK3=0300h-03FFh -ABANK4=0400h-04FFh -ABANK5=0500h-05FFh \
-  -ASFR=0D00h-0DFFhx2,0F00h-0F5Fh,0F60h-0FFFh -ABIGSFR=0D00h-0FFFh \
-  -ACONFIG=0300000h-030000Dh -AIDLOC=0200000h-0200007h \
+  --md=C:\Users\OMKARS~1\AppData\Local\Temp\xcAsfhk.0\driver_tmp_0.dat -E1 \
+  -ver=XC8 Compiler -ACODE=00h-03000h -ACONST=00h-03000h \
+  -ASMALLCONST=0600h-06FFhx42,03000h-03000h -AMEDIUMCONST=0600h-03000h \
+  -ACOMRAM=01h-05Fh -AABS1=00h-05FFh -ABIGRAM=01h-05FFh \
+  -ARAM=060h-0FFh,0100h-01FFhx5 -ABANK0=060h-0FFh -ABANK1=0100h-01FFh \
+  -ABANK2=0200h-02FFh -ABANK3=0300h-03FFh -ABANK4=0400h-04FFh \
+  -ABANK5=0500h-05FFh -ASFR=0D00h-0DFFhx2,0F00h-0F5Fh,0F60h-0FFFh \
+  -ABIGSFR=0D00h-0FFFh -ACONFIG=0300000h-030000Dh -AIDLOC=0200000h-0200007h \
   -AEEDATA=0F00000h-0F000FFh -peeprom_data=EEDATA \
   -preset_vec=00h,intcode=8h,intcodelo=18h,sivt_lo,sivt_hi=CODE \
   -ppowerup=CODE,init -pramtop=0600h -psmallconst=SMALLCONST \
@@ -25,7 +25,7 @@ Linker command line:
   -pfarbss=FARRAM,fardata=FARRAM,nvFARRAM=FARRAM \
   -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
   -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE -prparam=COMRAM \
-  C:\Users\OMKARS~1\AppData\Local\Temp\xcAsc94.0\driver_tmp_9.o \
+  C:\Users\OMKARS~1\AppData\Local\Temp\xcAsfhk.0\driver_tmp_9.o \
   dist/default/production\Led_Blinking_new.X.production.o 
 
 Object code version is 3.11
@@ -35,10 +35,10 @@ Machine type is 18F4580
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\OMKARS~1\AppData\Local\Temp\xcAsc94.0\driver_tmp_9.o
+C:\Users\OMKARS~1\AppData\Local\Temp\xcAsfhk.0\driver_tmp_9.o
                 idloc                            200000   200000        8        0       5
                 config                           300000   300000        E        0       4
-                init                               7FFC     7FFC        4     3FFE       0
+                init                               2FFC     2FFC        4     17FE       0
                 reset_vec                             0        0        4        0       0
 dist/default/production\Led_Blinking_new.X.production.o
                 idloc                            200000   200000        8        0       5
@@ -50,7 +50,7 @@ dist/default/production\Led_Blinking_new.X.production.o
 
 TOTAL           Name                               Link     Load   Length     Space
         CLASS   CODE           
-                init                               7FFC     7FFC        4         0
+                init                               2FFC     2FFC        4         0
                 reset_vec                             0        0        4         0
                 text0                               602      602       52         0
                 cinit                               654      654        6         0
@@ -109,7 +109,7 @@ SEGMENTS        Name                           Load    Length   Top    Selector 
                 cstackCOMRAM                   000001  000004  000005         1       1  COMRAM  
                 smallconst                     000600  000002  000602       300       0  SMALLCON
                 text0                          000602  000058  00065A       301       0  CODE    
-                init                           007FFC  000004  008000      3FFE       0  CODE    
+                init                           002FFC  000004  003000      17FE       0  CODE    
 
 
 UNUSED ADDRESS RANGES
@@ -124,15 +124,19 @@ UNUSED ADDRESS RANGES
         BIGRAM           000005-0005FF              5FB
         BIGSFR           000D00-000FFF              300
         CODE             000004-0005FF              5FC
-                         00065A-007FFB             79A2
+                         00065A-002FFB             29A2
+                         003000-003000                1
         COMRAM           000005-00005F               5B
         CONST            000004-0005FF              5FC
-                         00065A-007FFB             79A2
+                         00065A-002FFB             29A2
+                         003000-003000                1
         EEDATA           F00000-F000FF              100
-        MEDIUMCONST      00065A-007FFB             79A2
+        MEDIUMCONST      00065A-002FFB             29A2
+                         003000-003000                1
         RAM              000060-0005FF              100
         SFR              000D00-000FFF              100
-        SMALLCONST       00065A-007FFB              100
+        SMALLCONST       00065A-002FFB              100
+                         003000-003000                1
 
                                   Symbol Table
 
@@ -167,7 +171,7 @@ __Hibigdata              ibigdata     000000
 __Hidata                 idata        000000
 __Hidloc                 idloc        200008
 __Hifardata              ifardata     000000
-__Hinit                  init         008000
+__Hinit                  init         003000
 __Hintcode               intcode      000008
 __Hintcode_body          intcode_body 000000
 __Hintcodelo             intcodelo    000018
@@ -192,7 +196,7 @@ __Hsfr                   sfr          000000
 __Hsivt_hi               sivt_hi      000000
 __Hsivt_lo               sivt_lo      000018
 __Hsmallconst            smallconst   000602
-__Hspace_0               (abs)        008000
+__Hspace_0               (abs)        003000
 __Hspace_1               (abs)        000005
 __Hspace_2               (abs)        000000
 __Hspace_4               (abs)        60000E
@@ -230,7 +234,7 @@ __Libigdata              ibigdata     000000
 __Lidata                 idata        000000
 __Lidloc                 idloc        000000
 __Lifardata              ifardata     000000
-__Linit                  init         007FFC
+__Linit                  init         002FFC
 __Lintcode               intcode      000008
 __Lintcode_body          intcode_body 000000
 __Lintcodelo             intcodelo    000018
@@ -264,7 +268,7 @@ __Lstruct                struct       000000
 __Ltemp                  temp         000000
 __Ltext                  text         000000
 __Ltext0                 text0        000000
-__S0                     (abs)        008000
+__S0                     (abs)        003000
 __S1                     (abs)        000005
 __S4                     (abs)        000000
 __S5                     (abs)        000000
@@ -305,7 +309,7 @@ main@delay               cstackCOMRAM 000001
 main@delay_32            cstackCOMRAM 000003
 stackhi                  (abs)        000000
 stacklo                  (abs)        000000
-start                    init         007FFC
+start                    init         002FFC
 start_initialization     cinit        000654
 
 

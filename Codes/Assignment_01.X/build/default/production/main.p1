@@ -1246,107 +1246,131 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc/pic18f4580.h: 32465: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
 [v $root$_main `(v ~T0 @X0 0 e ]
-"42 main.c
-[; ;main.c: 42: void main(void) {
+"9 main.c
+[; ;main.c: 9: void main(void)
 [v _main `(v ~T0 @X0 1 ef ]
+"10
+[; ;main.c: 10: {
 {
 [e :U _main ]
 [f ]
-"44
-[; ;main.c: 44:     TRISB = 0x00;
+"11
+[; ;main.c: 11:     TRISB = 0x00;
 [e = _TRISB -> -> 0 `i `uc ]
-"45
-[; ;main.c: 45:     PORTB = 0X00;
+"12
+[; ;main.c: 12:     PORTB = 0x00;
 [e = _PORTB -> -> 0 `i `uc ]
-"46
-[; ;main.c: 46:     unsigned int delay = 0;
+"14
+[; ;main.c: 14:     unsigned int delay = 0;
 [v _delay `ui ~T0 @X0 1 a ]
 [e = _delay -> -> 0 `i `ui ]
-"47
-[; ;main.c: 47:     unsigned int i = 0;
-[v _i `ui ~T0 @X0 1 a ]
-[e = _i -> -> 0 `i `ui ]
-"49
-[; ;main.c: 49:     while (1) {
+"15
+[; ;main.c: 15:     int i = 0;
+[v _i `i ~T0 @X0 1 a ]
+[e = _i -> 0 `i ]
+"17
+[; ;main.c: 17:     while (1)
 [e :U 1090 ]
+"18
+[; ;main.c: 18:     {
 {
-"50
-[; ;main.c: 50:         if (delay++ == 50000) {
+"20
+[; ;main.c: 20:         if (delay++ == 50000)
 [e $ ! == -> ++ _delay -> -> 1 `i `ui `l -> 50000 `l 1092  ]
+"21
+[; ;main.c: 21:         {
 {
-"51
-[; ;main.c: 51:             delay = 0;
+"22
+[; ;main.c: 22:             delay = 0;
 [e = _delay -> -> 0 `i `ui ]
-"52
-[; ;main.c: 52:             if (i < 8) {
-[e $ ! < _i -> -> 8 `i `ui 1093  ]
+"25
+[; ;main.c: 25:             if (i < 8)
+[e $ ! < _i -> 8 `i 1093  ]
+"26
+[; ;main.c: 26:             {
 {
-"53
-[; ;main.c: 53:                 PORTB |= (1 << i);
+"27
+[; ;main.c: 27:                 PORTB |= (1 << i);
 [e =| _PORTB -> << -> 1 `i _i `Vuc ]
-"54
-[; ;main.c: 54:             } else if (i >= 8 && i < 16) {
+"28
+[; ;main.c: 28:             }
 }
 [e $U 1094  ]
+"31
+[; ;main.c: 31:             else if (i < 16)
 [e :U 1093 ]
-[e $ ! && >= _i -> -> 8 `i `ui < _i -> -> 16 `i `ui 1095  ]
+[e $ ! < _i -> 16 `i 1095  ]
+"32
+[; ;main.c: 32:             {
 {
-"55
-[; ;main.c: 55:                 PORTB = PORTB << 1;
+"33
+[; ;main.c: 33:                 PORTB = PORTB << 1;
 [e = _PORTB -> << -> _PORTB `i -> 1 `i `uc ]
-"56
-[; ;main.c: 56:             } else if (i >= 16 && i < 24) {
+"34
+[; ;main.c: 34:             }
 }
 [e $U 1096  ]
+"37
+[; ;main.c: 37:             else if (i < 24)
 [e :U 1095 ]
-[e $ ! && >= _i -> -> 16 `i `ui < _i -> -> 24 `i `ui 1097  ]
+[e $ ! < _i -> 24 `i 1097  ]
+"38
+[; ;main.c: 38:             {
 {
-"57
-[; ;main.c: 57:                 PORTB = PORTB | (0x80) >> (i - 16);
-[e = _PORTB -> | -> _PORTB `i >> -> 128 `i - _i -> -> 16 `i `ui `uc ]
-"58
-[; ;main.c: 58:             } else if (i >= 24 && i < 32) {
+"39
+[; ;main.c: 39:                 PORTB |= (0x80 >> (i - 16));
+[e =| _PORTB -> >> -> 128 `i - _i -> 16 `i `Vuc ]
+"40
+[; ;main.c: 40:             }
 }
 [e $U 1098  ]
+"43
+[; ;main.c: 43:             else if (i < 32)
 [e :U 1097 ]
-[e $ ! && >= _i -> -> 24 `i `ui < _i -> -> 32 `i `ui 1099  ]
+[e $ ! < _i -> 32 `i 1099  ]
+"44
+[; ;main.c: 44:             {
 {
-"59
-[; ;main.c: 59:                 PORTB = PORTB >> 1;
+"45
+[; ;main.c: 45:                 PORTB = PORTB >> 1;
 [e = _PORTB -> >> -> _PORTB `i -> 1 `i `uc ]
-"60
-[; ;main.c: 60:             } else {
+"46
+[; ;main.c: 46:             }
 }
 [e $U 1100  ]
+"49
+[; ;main.c: 49:             else
 [e :U 1099 ]
+"50
+[; ;main.c: 50:             {
 {
-"61
-[; ;main.c: 61:                 i = -1;
-[e = _i -> -U -> 1 `i `ui ]
-"62
-[; ;main.c: 62:             }
+"51
+[; ;main.c: 51:                 i = -1;
+[e = _i -U -> 1 `i ]
+"52
+[; ;main.c: 52:             }
 }
 [e :U 1100 ]
 [e :U 1098 ]
 [e :U 1096 ]
 [e :U 1094 ]
-"63
-[; ;main.c: 63:             i++;
-[e ++ _i -> -> 1 `i `ui ]
-"64
-[; ;main.c: 64:         }
+"54
+[; ;main.c: 54:             i++;
+[e ++ _i -> 1 `i ]
+"55
+[; ;main.c: 55:         }
 }
 [e :U 1092 ]
-"65
-[; ;main.c: 65:     }
+"56
+[; ;main.c: 56:     }
 }
 [e :U 1089 ]
 [e $U 1090  ]
 [e :U 1091 ]
-"66
-[; ;main.c: 66:     return;
+"58
+[; ;main.c: 58:     return;
 [e $UE 1088  ]
-"67
-[; ;main.c: 67: }
+"59
+[; ;main.c: 59: }
 [e :UE 1088 ]
 }

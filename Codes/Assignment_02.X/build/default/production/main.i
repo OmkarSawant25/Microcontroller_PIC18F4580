@@ -18020,7 +18020,6 @@ char key;
 char once = 1;
 int i = 0;
 
-
 char read_switch(char detect_type);
 void pattern_1();
 void pattern_2();
@@ -18037,10 +18036,14 @@ void main(void) {
     while (1) {
         key = read_switch(0);
         if (key == 0x0E) {
+            PORTB = 0x00;
+
             i = 0;
             flag = 1;
         }
         if (key == 0x0D) {
+            PORTB = 0x00;
+
             i = 0;
             flag = 2;
         }
@@ -18052,7 +18055,7 @@ void main(void) {
             PORTB = 0XF0;
             flag = 4;
         }
-        if (delay++ == 80000) {
+        if (delay++ == 25000) {
             delay = 0;
             if (flag == 1) {
 

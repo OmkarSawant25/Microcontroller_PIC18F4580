@@ -3,9 +3,9 @@
   <executable name="dist/default/production\Assignment_02.X.production.hex">
     <memory name="program">
       <units>bytes</units>
-      <length>32768</length>
-      <used>907</used>
-      <free>31861</free>
+      <length>12289</length>
+      <used>909</used>
+      <free>11380</free>
     </memory>
     <memory name="data">
       <units>bytes</units>

@@ -6,10 +6,10 @@ Linker command line:
   --edf=C:\Program Files\Microchip\xc8\v3.10\pic\dat\20250813170317_en.msgs \
   -cn -h+dist/default/production\Toggle_Led.X.production.sym \
   --cmf=dist/default/production\Toggle_Led.X.production.cmf -z -Q18F4580 \
-  -oC:\Users\OMKARS~1\AppData\Local\Temp\xcAsde0.0\driver_tmp_3.o \
+  -oC:\Users\OMKARS~1\AppData\Local\Temp\xcAs8pg.0\driver_tmp_3.o \
   --defsym=__MPLAB_BUILD=1 --fixupoverflow=error \
   -Mdist/default/production/Toggle_Led.X.production.map \
-  --md=C:\Users\OMKARS~1\AppData\Local\Temp\xcAsde0.0\driver_tmp_0.dat -E1 \
+  --md=C:\Users\OMKARS~1\AppData\Local\Temp\xcAs8pg.0\driver_tmp_0.dat -E1 \
   -ver=XC8 Compiler -ACODE=00h-03000h -ACONST=00h-03000h \
   -ASMALLCONST=0600h-06FFhx42,03000h-03000h -AMEDIUMCONST=0600h-03000h \
   -ACOMRAM=01h-05Fh -AABS1=00h-05FFh -ABIGRAM=01h-05FFh \
@@ -25,7 +25,7 @@ Linker command line:
   -pfarbss=FARRAM,fardata=FARRAM,nvFARRAM=FARRAM \
   -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
   -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE -prparam=COMRAM \
-  C:\Users\OMKARS~1\AppData\Local\Temp\xcAsde0.0\driver_tmp_9.o \
+  C:\Users\OMKARS~1\AppData\Local\Temp\xcAs8pg.0\driver_tmp_9.o \
   dist/default/production\Toggle_Led.X.production.o 
 
 Object code version is 3.11
@@ -35,7 +35,7 @@ Machine type is 18F4580
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\OMKARS~1\AppData\Local\Temp\xcAsde0.0\driver_tmp_9.o
+C:\Users\OMKARS~1\AppData\Local\Temp\xcAs8pg.0\driver_tmp_9.o
                 idloc                            200000   200000        8        0       5
                 config                           300000   300000        E        0       4
                 init                               2FFC     2FFC        4     17FE       0
@@ -44,16 +44,16 @@ dist/default/production\Toggle_Led.X.production.o
                 idloc                            200000   200000        8        0       5
                 config                           300000   300000        E        0       4
                 smallconst                          600      600        2      300       0
-                text0                               602      602       36      301       0
+                text0                               602      602       62      301       0
                 cstackCOMRAM                          1        1        2        1       1
-                cinit                               638      638        6      301       0
+                cinit                               664      664        6      301       0
 
 TOTAL           Name                               Link     Load   Length     Space
         CLASS   CODE           
                 init                               2FFC     2FFC        4         0
                 reset_vec                             0        0        4         0
-                text0                               602      602       36         0
-                cinit                               638      638        6         0
+                text0                               602      602       62         0
+                cinit                               664      664        6         0
 
         CLASS   CONST          
 
@@ -108,7 +108,7 @@ SEGMENTS        Name                           Load    Length   Top    Selector 
                 reset_vec                      000000  000004  000004         0       0  CODE    
                 cstackCOMRAM                   000001  000002  000003         1       1  COMRAM  
                 smallconst                     000600  000002  000602       300       0  SMALLCON
-                text0                          000602  00003C  00063E       301       0  CODE    
+                text0                          000602  000068  00066A       301       0  CODE    
                 init                           002FFC  000004  003000      17FE       0  CODE    
 
 
@@ -124,23 +124,24 @@ UNUSED ADDRESS RANGES
         BIGRAM           000003-0005FF              5FD
         BIGSFR           000D00-000FFF              300
         CODE             000004-0005FF              5FC
-                         00063E-002FFB             29BE
+                         00066A-002FFB             2992
                          003000-003000                1
         COMRAM           000003-00005F               5D
         CONST            000004-0005FF              5FC
-                         00063E-002FFB             29BE
+                         00066A-002FFB             2992
                          003000-003000                1
         EEDATA           F00000-F000FF              100
-        MEDIUMCONST      00063E-002FFB             29BE
+        MEDIUMCONST      00066A-002FFB             2992
                          003000-003000                1
         RAM              000060-0005FF              100
         SFR              000D00-000FFF              100
-        SMALLCONST       00063E-002FFB              100
+        SMALLCONST       00066A-002FFB              100
                          003000-003000                1
 
                                   Symbol Table
 
 _PORTB                   (abs)        000F81
+_PORTBbits               (abs)        000F81
 _TRISB                   (abs)        000F93
 __HRAM                   (abs)        000000
 __H__absolute__          __absolute__ 000000
@@ -287,18 +288,18 @@ ___stack_hi              stack        000000
 ___stack_lo              stack        000000
 __accesstop              (abs)        000060
 __activetblptr           (abs)        000000
-__end_of__initialization cinit        000638
-__end_of_main            text0        000638
-__initialization         cinit        000638
+__end_of__initialization cinit        000664
+__end_of_main            text0        000664
+__initialization         cinit        000664
 __mediumconst            smallconst   000600
-__pcinit                 cinit        000638
+__pcinit                 cinit        000664
 __pcstackCOMRAM          cstackCOMRAM 000001
 __psmallconst            smallconst   000600
 __ptext0                 text0        000602
 __ramtop                 ramtop       000600
 __smallconst             smallconst   000600
 _main                    text0        000602
-end_of_initialization    cinit        000638
+end_of_initialization    cinit        000664
 intlevel0                text         000000
 intlevel1                text         000000
 intlevel2                text         000000
@@ -309,19 +310,19 @@ main@delay               cstackCOMRAM 000001
 stackhi                  (abs)        000000
 stacklo                  (abs)        000000
 start                    init         002FFC
-start_initialization     cinit        000638
+start_initialization     cinit        000664
 
 
 MODULE INFORMATION
 
 Module		Function		Class		Link	Load	Size
 shared
-		__initialization		CODE           	0638	0000	1
+		__initialization		CODE           	0664	0000	1
 
 shared estimated size: 1
 
 main.c
-		_main          		CODE           	0602	0000	54
+		_main          		CODE           	0602	0000	98
 
-main.c estimated size: 54
+main.c estimated size: 98
 

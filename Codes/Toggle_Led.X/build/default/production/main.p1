@@ -6,6 +6,33 @@ Version 4.0 HI-TECH Software Intermediate Code
 "25715
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc/pic18f4580.h: 25715: extern volatile unsigned char PORTB __attribute__((address(0xF81)));
 [v _PORTB `Vuc ~T0 @X0 0 e@3969 ]
+"25721
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc/pic18f4580.h: 25721:     struct {
+[s S822 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S822 . RB0 RB1 RB2 RB3 RB4 RB5 RB6 RB7 ]
+"25731
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc/pic18f4580.h: 25731:     struct {
+[s S823 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S823 . INT0 INT1 INT2 CANRX KBI0 KBI1 KBI2 KBI3 ]
+"25741
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc/pic18f4580.h: 25741:     struct {
+[s S824 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S824 . AN10 AN8 CANTX . AN9 PGM PGC PGD ]
+"25751
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc/pic18f4580.h: 25751:     struct {
+[s S825 :1 `uc 1 ]
+[n S825 . FLT0 ]
+"25754
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc/pic18f4580.h: 25754:     struct {
+[s S826 :3 `uc 1 :1 `uc 1 ]
+[n S826 . . CCP2_PA2 ]
+"25720
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc/pic18f4580.h: 25720: typedef union {
+[u S821 `S822 1 `S823 1 `S824 1 `S825 1 `S826 1 ]
+[n S821 . . . . . . ]
+"25759
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc/pic18f4580.h: 25759: extern volatile PORTBbits_t PORTBbits __attribute__((address(0xF81)));
+[v _PORTBbits `VS821 ~T0 @X0 0 e@3969 ]
 "55 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc/pic18f4580.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc/pic18f4580.h: 55: __asm("RXF6SIDH equ 0D60h");
 [; <" RXF6SIDH equ 0D60h ;# ">
@@ -1246,54 +1273,70 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc/pic18f4580.h: 32465: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
 [v $root$_main `(v ~T0 @X0 0 e ]
-"11 main.c
-[; ;main.c: 11: void main(void) {
+"42 main.c
+[; ;main.c: 42: void main(void) {
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"12
-[; ;main.c: 12:     unsigned int delay = 0;
-[v _delay `ui ~T0 @X0 1 a ]
-[e = _delay -> -> 0 `i `ui ]
-"14
-[; ;main.c: 14:     TRISB = 0x00;
+"44
+[; ;main.c: 44:     TRISB = 0x00;
 [e = _TRISB -> -> 0 `i `uc ]
-"15
-[; ;main.c: 15:     PORTB = 0x00;
-[e = _PORTB -> -> 0 `i `uc ]
-"17
-[; ;main.c: 17:     while(1)
+"45
+[; ;main.c: 45:     PORTB = 0x01;
+[e = _PORTB -> -> 1 `i `uc ]
+"47
+[; ;main.c: 47:     int delay = 0;
+[v _delay `i ~T0 @X0 1 a ]
+[e = _delay -> 0 `i ]
+"48
+[; ;main.c: 48:     while (1) {
 [e :U 1090 ]
-"18
-[; ;main.c: 18:     {
 {
-"19
-[; ;main.c: 19:         if(delay++ == 50000)
-[e $ ! == -> ++ _delay -> -> 1 `i `ui `l -> 50000 `l 1092  ]
-"20
-[; ;main.c: 20:         {
+"49
+[; ;main.c: 49:         delay++;
+[e ++ _delay -> 1 `i ]
+"50
+[; ;main.c: 50:         if (delay < 900) {
+[e $ ! < _delay -> 900 `i 1092  ]
 {
-"21
-[; ;main.c: 21:             delay = 0;
-[e = _delay -> -> 0 `i `ui ]
-"22
-[; ;main.c: 22:             PORTB = ~PORTB;
-[e = _PORTB -> ~ -> _PORTB `i `uc ]
-"23
-[; ;main.c: 23:         }
+"51
+[; ;main.c: 51:             PORTBbits.RB0 = 0;
+[e = . . _PORTBbits 0 0 -> -> 0 `i `uc ]
+"52
+[; ;main.c: 52:         } else if (delay < 1000) {
 }
+[e $U 1093  ]
 [e :U 1092 ]
-"24
-[; ;main.c: 24:     }
+[e $ ! < _delay -> 1000 `i 1094  ]
+{
+"53
+[; ;main.c: 53:             PORTBbits.RB0 = 1;
+[e = . . _PORTBbits 0 0 -> -> 1 `i `uc ]
+"54
+[; ;main.c: 54:         } else {
+}
+[e $U 1095  ]
+[e :U 1094 ]
+{
+"55
+[; ;main.c: 55:             delay = 0;
+[e = _delay -> 0 `i ]
+"56
+[; ;main.c: 56:         }
+}
+[e :U 1095 ]
+[e :U 1093 ]
+"57
+[; ;main.c: 57:     }
 }
 [e :U 1089 ]
 [e $U 1090  ]
 [e :U 1091 ]
-"25
-[; ;main.c: 25:     return;
+"58
+[; ;main.c: 58:     return;
 [e $UE 1088  ]
-"26
-[; ;main.c: 26: }
+"59
+[; ;main.c: 59: }
 [e :UE 1088 ]
 }

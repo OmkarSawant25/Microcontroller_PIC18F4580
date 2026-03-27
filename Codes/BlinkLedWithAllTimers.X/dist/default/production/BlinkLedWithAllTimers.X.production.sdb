@@ -1,0 +1,234 @@
+[p GLOBOPT AUTOSTATIC IEEE_FLT IEEE_DBL LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F4580 ]
+[d frameptr 4065 ]
+"7 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\__lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+"7 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\aldiv.c
+[v ___aldiv __aldiv `(l  1 e 4 0 ]
+"7 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\almod.c
+[v ___almod __almod `(l  1 e 4 0 ]
+"9 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\aodiv.c
+[v ___aodiv __aodiv `(o  1 e 8 0 ]
+"9 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\aomod.c
+[v ___aomod __aomod `(o  1 e 8 0 ]
+"7 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\atdiv.c
+[v ___atdiv __atdiv `(m  1 e 3 0 ]
+"7 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\atmod.c
+[v ___atmod __atmod `(m  1 e 3 0 ]
+"7 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"7 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+"4 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\fleq.c
+[v ___fleq __fleq `(b  1 e 0 0 ]
+"62 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\float.c
+[v ___ftpack __ftpack `(f  1 e 4 0 ]
+"86 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 4 0 ]
+"54 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 4 0 ]
+"62 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 4 0 ]
+"19 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 4 0 ]
+"7 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\llmod.c
+[v ___llmod __llmod `(ul  1 e 4 0 ]
+"9 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\lodiv.c
+[v ___lodiv __lodiv `(uo  1 e 8 0 ]
+"9 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\lomod.c
+[v ___lomod __lomod `(uo  1 e 8 0 ]
+"7 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\ltdiv.c
+[v ___ltdiv __ltdiv `(um  1 e 3 0 ]
+"7 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\ltmod.c
+[v ___ltmod __ltmod `(um  1 e 3 0 ]
+"7 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+"7 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+"10 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"245
+[v ___flsub __flsub `(d  1 e 4 0 ]
+"11 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+"8 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+"15 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+"15 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\Umul24.c
+[v ___tmul __tmul `(um  1 e 3 0 ]
+"15 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"91 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\Umul64.c
+[v ___omul __omul `(uo  1 e 8 0 ]
+"13 D:\MC\Codes\BlinkLedWithAllTimers.X\main.c
+[v _main main `(v  1 e 1 0 ]
+"25
+[v __ISR _ISR `IIH(v  1 e 1 0 ]
+"54
+[v _init_timer0 init_timer0 `(v  1 e 1 0 ]
+"70
+[v _init_timer1 init_timer1 `(v  1 e 1 0 ]
+"87
+[v _init_timer2 init_timer2 `(v  1 e 1 0 ]
+"104
+[v _init_port init_port `(v  1 e 1 0 ]
+[s S90 . 1 `uc 1 RB0 1 0 :1:0 
+`uc 1 RB1 1 0 :1:1 
+`uc 1 RB2 1 0 :1:2 
+`uc 1 RB3 1 0 :1:3 
+`uc 1 RB4 1 0 :1:4 
+`uc 1 RB5 1 0 :1:5 
+`uc 1 RB6 1 0 :1:6 
+`uc 1 RB7 1 0 :1:7 
+]
+"25759 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc/pic18f4580.h
+[s S99 . 1 `uc 1 INT0 1 0 :1:0 
+`uc 1 INT1 1 0 :1:1 
+`uc 1 INT2 1 0 :1:2 
+`uc 1 CANRX 1 0 :1:3 
+`uc 1 KBI0 1 0 :1:4 
+`uc 1 KBI1 1 0 :1:5 
+`uc 1 KBI2 1 0 :1:6 
+`uc 1 KBI3 1 0 :1:7 
+]
+[s S108 . 1 `uc 1 AN10 1 0 :1:0 
+`uc 1 AN8 1 0 :1:1 
+`uc 1 CANTX 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 AN9 1 0 :1:4 
+`uc 1 PGM 1 0 :1:5 
+`uc 1 PGC 1 0 :1:6 
+`uc 1 PGD 1 0 :1:7 
+]
+[s S117 . 1 `uc 1 FLT0 1 0 :1:0 
+]
+[s S119 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 CCP2_PA2 1 0 :1:3 
+]
+[u S122 . 1 `S90 1 . 1 0 `S99 1 . 1 0 `S108 1 . 1 0 `S117 1 . 1 0 `S119 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES122  1 e 1 @3969 ]
+[s S164 . 1 `uc 1 TRISB0 1 0 :1:0 
+`uc 1 TRISB1 1 0 :1:1 
+`uc 1 TRISB2 1 0 :1:2 
+`uc 1 TRISB3 1 0 :1:3 
+`uc 1 TRISB4 1 0 :1:4 
+`uc 1 TRISB5 1 0 :1:5 
+`uc 1 TRISB6 1 0 :1:6 
+`uc 1 TRISB7 1 0 :1:7 
+]
+"27092
+[u S182 . 1 `S164 1 . 1 0 `S90 1 . 1 0 ]
+[v _TRISBbits TRISBbits `VES182  1 e 1 @3987 ]
+"30879
+[v _PR2 PR2 `VEuc  1 e 1 @4043 ]
+"30989
+[v _TMR2 TMR2 `VEuc  1 e 1 @4044 ]
+"31108
+[v _TMR1 TMR1 `VEus  1 e 2 @4046 ]
+[s S204 . 1 `uc 1 T0PS 1 0 :3:0 
+`uc 1 PSA 1 0 :1:3 
+`uc 1 T0SE 1 0 :1:4 
+`uc 1 T0CS 1 0 :1:5 
+`uc 1 T08BIT 1 0 :1:6 
+`uc 1 TMR0ON 1 0 :1:7 
+]
+"31658
+[s S211 . 1 `uc 1 T0PS0 1 0 :1:0 
+`uc 1 T0PS1 1 0 :1:1 
+`uc 1 T0PS2 1 0 :1:2 
+`uc 1 T0PS3 1 0 :1:3 
+]
+[u S216 . 1 `S204 1 . 1 0 `S211 1 . 1 0 ]
+[v _T0CONbits T0CONbits `VES216  1 e 1 @4053 ]
+"31713
+[v _TMR0 TMR0 `VEus  1 e 2 @4054 ]
+[s S40 . 1 `uc 1 RBIF 1 0 :1:0 
+`uc 1 INT0IF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 RBIE 1 0 :1:3 
+`uc 1 INT0IE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE_GIEL 1 0 :1:6 
+`uc 1 GIE_GIEH 1 0 :1:7 
+]
+"32188
+[s S49 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 INT0F 1 0 :1:1 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 INT0E 1 0 :1:4 
+`uc 1 T0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+[s S58 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 GIEL 1 0 :1:6 
+`uc 1 GIEH 1 0 :1:7 
+]
+[u S62 . 1 `S40 1 . 1 0 `S49 1 . 1 0 `S58 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES62  1 e 1 @4082 ]
+"35492
+[v _GIE GIE `VEb  1 e 0 @32663 ]
+"36086
+[v _PEIE PEIE `VEb  1 e 0 @32662 ]
+"39005
+[v _T1CKPS0 T1CKPS0 `VEb  1 e 0 @32364 ]
+"39008
+[v _T1CKPS1 T1CKPS1 `VEb  1 e 0 @32365 ]
+"39032
+[v _T2CKPS0 T2CKPS0 `VEb  1 e 0 @32336 ]
+"39035
+[v _T2CKPS1 T2CKPS1 `VEb  1 e 0 @32337 ]
+"39110
+[v _TMR1CS TMR1CS `VEb  1 e 0 @32361 ]
+"39113
+[v _TMR1IE TMR1IE `VEb  1 e 0 @31976 ]
+"39116
+[v _TMR1IF TMR1IF `VEb  1 e 0 @31984 ]
+"39122
+[v _TMR1ON TMR1ON `VEb  1 e 0 @32360 ]
+"39125
+[v _TMR2IE TMR2IE `VEb  1 e 0 @31977 ]
+"39128
+[v _TMR2IF TMR2IF `VEb  1 e 0 @31985 ]
+"39134
+[v _TMR2ON TMR2ON `VEb  1 e 0 @32338 ]
+"9 D:\MC\Codes\BlinkLedWithAllTimers.X\main.c
+[v _count_0 count_0 `ui  1 s 2 count_0 ]
+"10
+[v _count_1 count_1 `ui  1 s 2 count_1 ]
+"11
+[v _count_2 count_2 `ui  1 s 2 count_2 ]
+"13
+[v _main main `(v  1 e 1 0 ]
+{
+"23
+} 0
+"87
+[v _init_timer2 init_timer2 `(v  1 e 1 0 ]
+{
+"102
+} 0
+"70
+[v _init_timer1 init_timer1 `(v  1 e 1 0 ]
+{
+"85
+} 0
+"54
+[v _init_timer0 init_timer0 `(v  1 e 1 0 ]
+{
+"68
+} 0
+"104
+[v _init_port init_port `(v  1 e 1 0 ]
+{
+"107
+} 0
+"25
+[v __ISR _ISR `IIH(v  1 e 1 0 ]
+{
+"52
+} 0

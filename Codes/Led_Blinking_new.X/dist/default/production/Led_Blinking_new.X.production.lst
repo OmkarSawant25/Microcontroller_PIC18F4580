@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V3.10 build 20250813170317 
-                                                                                               Tue Feb 24 16:12:23 2026
+                                                                                               Fri Mar 13 18:17:26 2026
 
 Microchip MPLAB XC8 C Compiler v3.10 (Free license) build 20250813170317 Og1 
      1                           	processor	18F4580
@@ -633,7 +633,7 @@ Microchip MPLAB XC8 C Compiler v3.10 (Free license) build 20250813170317 Og1
    619   000648  EF19  F003         	goto	l812
    620   00064C                     u20:
    621   00064C  EF02  F003         	goto	l9
-   622   000650  EFFE  F03F         	goto	start
+   622   000650  EFFE  F017         	goto	start
    623   000654                     __end_of_main:
    624                           	callstack 0
    625                           
@@ -957,13 +957,13 @@ DATA                 0      0       4      0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V3.10 build 20250813170317 
-Symbol Table                                                                                   Tue Feb 24 16:12:23 2026
+Symbol Table                                                                                   Fri Mar 13 18:17:26 2026
 
                       l9 0604                       l12 0628                       u10 0628  
                      u11 0624                       u20 064C                       u21 0648  
                     l810 062A                      l812 0632                      l804 0602  
                     l806 0606                      l808 060E                     _main 0602  
-                   start 7FFC             ___param_bank 0000             main@delay_32 0003  
+                   start 2FFC             ___param_bank 0000             main@delay_32 0003  
                   ?_main 0001                    _PORTB 0F81                    _TRISB 0F93  
                   status 0FD8          __initialization 0654             __end_of_main 0654  
                  ??_main 0001            __activetblptr 0000                   isa$std 0001  

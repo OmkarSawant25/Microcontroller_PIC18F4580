@@ -3,9 +3,9 @@
   <executable name="dist/default/production\Led_Blinking_new.X.production.hex">
     <memory name="program">
       <units>bytes</units>
-      <length>32768</length>
+      <length>12289</length>
       <used>98</used>
-      <free>32670</free>
+      <free>12191</free>
     </memory>
     <memory name="data">
       <units>bytes</units>
