@@ -6,9 +6,9 @@
             <name>Toggle_Led</name>
             <creation-uuid>0f4b037d-f85c-4793-b47b-2bfc6e2d3271</creation-uuid>
             <make-project-type>0</make-project-type>
-            <c-extensions/>
+            <c-extensions>c</c-extensions>
             <cpp-extensions/>
-            <header-extensions>c</header-extensions>
+            <header-extensions/>
             <asminc-extensions/>
             <sourceEncoding>ISO-8859-1</sourceEncoding>
             <make-dep-projects/>

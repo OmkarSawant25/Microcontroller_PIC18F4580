@@ -6,9 +6,9 @@
             <name>Led_Pattern</name>
             <creation-uuid>7c2051ce-6717-4e9a-9d70-084f47453932</creation-uuid>
             <make-project-type>0</make-project-type>
-            <c-extensions/>
+            <c-extensions>c</c-extensions>
             <cpp-extensions/>
-            <header-extensions>c</header-extensions>
+            <header-extensions/>
             <asminc-extensions/>
             <sourceEncoding>ISO-8859-1</sourceEncoding>
             <make-dep-projects/>

@@ -6,9 +6,9 @@
             <name>Matrix_Keypad</name>
             <creation-uuid>216c8f8c-56ef-409d-bae5-22af504e1077</creation-uuid>
             <make-project-type>0</make-project-type>
-            <c-extensions/>
+            <c-extensions>c</c-extensions>
             <cpp-extensions/>
-            <header-extensions>c</header-extensions>
+            <header-extensions/>
             <asminc-extensions/>
             <sourceEncoding>ISO-8859-1</sourceEncoding>
             <make-dep-projects/>

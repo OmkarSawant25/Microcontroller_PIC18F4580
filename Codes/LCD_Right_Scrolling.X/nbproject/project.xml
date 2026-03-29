@@ -6,9 +6,9 @@
             <name>LCD_Right_Scrolling</name>
             <creation-uuid>e6e82b58-346f-4569-a61d-3551a7aa8d40</creation-uuid>
             <make-project-type>0</make-project-type>
-            <c-extensions/>
+            <c-extensions>c</c-extensions>
             <cpp-extensions/>
-            <header-extensions>c,h</header-extensions>
+            <header-extensions>h</header-extensions>
             <asminc-extensions/>
             <sourceEncoding>ISO-8859-1</sourceEncoding>
             <make-dep-projects/>

@@ -6,9 +6,9 @@
             <name>BlinkLedWithAllTimers</name>
             <creation-uuid>f98a1297-e060-46b7-935b-7029d073eb8c</creation-uuid>
             <make-project-type>0</make-project-type>
-            <c-extensions/>
+            <c-extensions>c</c-extensions>
             <cpp-extensions/>
-            <header-extensions>c</header-extensions>
+            <header-extensions/>
             <asminc-extensions/>
             <sourceEncoding>ISO-8859-1</sourceEncoding>
             <make-dep-projects/>

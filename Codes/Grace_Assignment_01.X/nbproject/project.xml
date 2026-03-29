@@ -6,9 +6,9 @@
             <name>Grace_Assignment_01</name>
             <creation-uuid>74ea3e19-85dd-4d08-96c1-3d3e842fb0af</creation-uuid>
             <make-project-type>0</make-project-type>
-            <c-extensions/>
+            <c-extensions>c</c-extensions>
             <cpp-extensions/>
-            <header-extensions>c</header-extensions>
+            <header-extensions/>
             <asminc-extensions/>
             <sourceEncoding>ISO-8859-1</sourceEncoding>
             <make-dep-projects/>

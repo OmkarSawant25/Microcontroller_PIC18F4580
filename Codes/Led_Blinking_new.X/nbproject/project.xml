@@ -6,9 +6,9 @@
             <name>Led_Blinking_new</name>
             <creation-uuid>d646908c-275b-40ad-b8c5-ec585b4f5e67</creation-uuid>
             <make-project-type>0</make-project-type>
-            <c-extensions/>
+            <c-extensions>c</c-extensions>
             <cpp-extensions/>
-            <header-extensions>c</header-extensions>
+            <header-extensions/>
             <asminc-extensions/>
             <sourceEncoding>ISO-8859-1</sourceEncoding>
             <make-dep-projects/>

@@ -6,9 +6,9 @@
             <name>Seven_Segment_Display</name>
             <creation-uuid>b571ea3b-0c12-4f95-8311-52be949819bd</creation-uuid>
             <make-project-type>0</make-project-type>
-            <c-extensions/>
+            <c-extensions>c</c-extensions>
             <cpp-extensions/>
-            <header-extensions>c</header-extensions>
+            <header-extensions/>
             <asminc-extensions/>
             <sourceEncoding>ISO-8859-1</sourceEncoding>
             <make-dep-projects/>
