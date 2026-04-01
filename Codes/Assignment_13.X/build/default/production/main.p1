@@ -1359,135 +1359,135 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 70:     while (1) {
 [e :U 1090 ]
 {
-"72
-[; ;main.c: 72:         value = read_adc(6);
+"71
+[; ;main.c: 71:         value = read_adc(6);
 [e = _value ( _read_adc (1 -> -> 6 `i `uc ]
-"76
-[; ;main.c: 76:         milli_volt = value * 4887 / 1000;
+"74
+[; ;main.c: 74:         milli_volt = value * 4887 / 1000;
 [e = _milli_volt / * -> _value `ui -> -> 4887 `i `ui -> -> 1000 `i `ui ]
-"79
-[; ;main.c: 79:         celcius = milli_volt / 10;
+"76
+[; ;main.c: 76:         celcius = milli_volt / 10;
 [e = _celcius / _milli_volt -> -> 10 `i `ui ]
-"86
-[; ;main.c: 86:         ssd[0] = digit[(celcius / 10)];
+"83
+[; ;main.c: 83:         ssd[0] = digit[celcius / 10];
 [e = *U + &U _ssd * -> -> -> 0 `i `ui `ux -> -> # *U &U _ssd `ui `ux *U + &U _digit * -> / _celcius -> -> 10 `i `ui `ux -> -> # *U &U _digit `ui `ux ]
-"87
-[; ;main.c: 87:         ssd[1] = digit[(celcius % 10)];
+"84
+[; ;main.c: 84:         ssd[1] = digit[celcius % 10];
 [e = *U + &U _ssd * -> -> -> 1 `i `ui `ux -> -> # *U &U _ssd `ui `ux *U + &U _digit * -> % _celcius -> -> 10 `i `ui `ux -> -> # *U &U _digit `ui `ux ]
-"88
-[; ;main.c: 88:         ssd[2] = 0x10;
+"85
+[; ;main.c: 85:         ssd[2] = 0x10;
 [e = *U + &U _ssd * -> -> -> 2 `i `ui `ux -> -> # *U &U _ssd `ui `ux -> -> 16 `i `uc ]
-"89
-[; ;main.c: 89:         ssd[3] = 0xC6;
+"86
+[; ;main.c: 86:         ssd[3] = 0xC6;
 [e = *U + &U _ssd * -> -> -> 3 `i `ui `ux -> -> # *U &U _ssd `ui `ux -> -> 198 `i `uc ]
-"91
-[; ;main.c: 91:         display(ssd);
+"88
+[; ;main.c: 88:         display(ssd);
 [e ( _display (1 &U _ssd ]
-"92
-[; ;main.c: 92:     }
+"89
+[; ;main.c: 89:     }
 }
 [e :U 1089 ]
 [e $U 1090  ]
 [e :U 1091 ]
-"94
-[; ;main.c: 94:     return;
+"91
+[; ;main.c: 91:     return;
 [e $UE 1088  ]
-"95
-[; ;main.c: 95: }
+"92
+[; ;main.c: 92: }
 [e :UE 1088 ]
 }
-"98
-[; ;main.c: 98: void init_adc() {
+"95
+[; ;main.c: 95: void init_adc() {
 [v _init_adc `(v ~T0 @X0 1 ef ]
 {
 [e :U _init_adc ]
 [f ]
-"100
-[; ;main.c: 100:     ADFM = 1;
+"97
+[; ;main.c: 97:     ADFM = 1;
 [e = _ADFM -> -> 1 `i `b ]
-"103
-[; ;main.c: 103:     ACQT2 = 1;
+"100
+[; ;main.c: 100:     ACQT2 = 1;
 [e = _ACQT2 -> -> 1 `i `b ]
-"104
-[; ;main.c: 104:     ACQT1 = 0;
+"101
+[; ;main.c: 101:     ACQT1 = 0;
 [e = _ACQT1 -> -> 0 `i `b ]
-"105
-[; ;main.c: 105:     ACQT0 = 0;
+"102
+[; ;main.c: 102:     ACQT0 = 0;
 [e = _ACQT0 -> -> 0 `i `b ]
-"108
-[; ;main.c: 108:     ADCS2 = 0;
+"105
+[; ;main.c: 105:     ADCS2 = 0;
 [e = _ADCS2 -> -> 0 `i `b ]
-"109
-[; ;main.c: 109:     ADCS1 = 1;
+"106
+[; ;main.c: 106:     ADCS1 = 1;
 [e = _ADCS1 -> -> 1 `i `b ]
-"110
-[; ;main.c: 110:     ADCS0 = 0;
+"107
+[; ;main.c: 107:     ADCS0 = 0;
 [e = _ADCS0 -> -> 0 `i `b ]
-"112
-[; ;main.c: 112:     GODONE = 0;
+"109
+[; ;main.c: 109:     GODONE = 0;
 [e = _GODONE -> -> 0 `i `b ]
-"115
-[; ;main.c: 115:     VCFG1 = 0;
+"112
+[; ;main.c: 112:     VCFG1 = 0;
 [e = _VCFG1 -> -> 0 `i `b ]
-"116
-[; ;main.c: 116:     VCFG0 = 0;
+"113
+[; ;main.c: 113:     VCFG0 = 0;
 [e = _VCFG0 -> -> 0 `i `b ]
-"119
-[; ;main.c: 119:     ADRESH = 0;
+"116
+[; ;main.c: 116:     ADRESH = 0;
 [e = _ADRESH -> -> 0 `i `uc ]
-"120
-[; ;main.c: 120:     ADRESL = 0;
+"117
+[; ;main.c: 117:     ADRESL = 0;
 [e = _ADRESL -> -> 0 `i `uc ]
-"122
-[; ;main.c: 122:     ADON = 1;
+"119
+[; ;main.c: 119:     ADON = 1;
 [e = _ADON -> -> 1 `i `b ]
-"123
-[; ;main.c: 123: }
+"120
+[; ;main.c: 120: }
 [e :UE 1092 ]
 }
-"126
-[; ;main.c: 126: unsigned short read_adc(unsigned char channel) {
+"123
+[; ;main.c: 123: unsigned short read_adc(unsigned char channel) {
 [v _read_adc `(us ~T0 @X0 1 ef1`uc ]
 {
 [e :U _read_adc ]
 [v _channel `uc ~T0 @X0 1 r1 ]
 [f ]
-"128
-[; ;main.c: 128:     unsigned short reg_value;
+"124
+[; ;main.c: 124:     unsigned short reg_value;
 [v _reg_value `us ~T0 @X0 1 a ]
-"131
-[; ;main.c: 131:     ADCON0 = (ADCON0 & 0XC3) | (channel << 2);
+"126
+[; ;main.c: 126:     ADCON0 = (ADCON0 & 0XC3) | (channel << 2);
 [e = _ADCON0 -> | & -> _ADCON0 `i -> 195 `i << -> _channel `i -> 2 `i `uc ]
-"133
-[; ;main.c: 133:     GO = 1;
+"127
+[; ;main.c: 127:     GO = 1;
 [e = _GO -> -> 1 `i `b ]
-"135
-[; ;main.c: 135:     while (GO);
+"128
+[; ;main.c: 128:     while (GO);
 [e $U 1094  ]
 [e :U 1095 ]
 [e :U 1094 ]
 [e $ _GO 1095  ]
 [e :U 1096 ]
-"138
-[; ;main.c: 138:     reg_value = (ADRESH << 8) | ADRESL;
+"130
+[; ;main.c: 130:     reg_value = (ADRESH << 8) | ADRESL;
 [e = _reg_value -> | << -> _ADRESH `i -> 8 `i -> _ADRESL `i `us ]
-"140
-[; ;main.c: 140:     return reg_value;
+"131
+[; ;main.c: 131:     return reg_value;
 [e ) _reg_value ]
 [e $UE 1093  ]
-"141
-[; ;main.c: 141: }
+"132
+[; ;main.c: 132: }
 [e :UE 1093 ]
 }
-"144
-[; ;main.c: 144: void display(char *ssd) {
+"135
+[; ;main.c: 135: void display(char *ssd) {
 [v _display `(v ~T0 @X0 1 ef1`*uc ]
 {
 [e :U _display ]
 [v _ssd `*uc ~T0 @X0 1 r1 ]
 [f ]
-"146
-[; ;main.c: 146:     for (int data = 0; data < 4; data++) {
+"136
+[; ;main.c: 136:     for (int data = 0; data < 4; data++) {
 {
 [v _data `i ~T0 @X0 1 a ]
 [e = _data -> 0 `i ]
@@ -1495,14 +1495,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $U 1099  ]
 [e :U 1098 ]
 {
-"148
-[; ;main.c: 148:         PORTD = ssd[data];
+"137
+[; ;main.c: 137:         PORTD = ssd[data];
 [e = _PORTD -> *U + _ssd * -> _data `x -> -> # *U _ssd `i `x `uc ]
-"151
-[; ;main.c: 151:         PORTA = (PORTA & 0xF0) | (1 << data);
+"139
+[; ;main.c: 139:         PORTA = (PORTA & 0xF0) | (1 << data);
 [e = _PORTA -> | & -> _PORTA `i -> 240 `i << -> 1 `i _data `uc ]
-"154
-[; ;main.c: 154:         for (int delay = 1000; delay--;);
+"141
+[; ;main.c: 141:         for (int delay = 1000; delay--;);
 {
 [v _delay `i ~T0 @X0 1 a ]
 [e = _delay -> 1000 `i ]
@@ -1512,14 +1512,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $ != -- _delay -> 1 `i -> 0 `i 1101  ]
 [e :U 1102 ]
 }
-"155
-[; ;main.c: 155:     }
+"142
+[; ;main.c: 142:     }
 }
 [e ++ _data -> 1 `i ]
 [e $ < _data -> 4 `i 1098  ]
 [e :U 1099 ]
 }
-"156
-[; ;main.c: 156: }
+"143
+[; ;main.c: 143: }
 [e :UE 1097 ]
 }

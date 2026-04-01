@@ -80,8 +80,8 @@ void main(void) {
         // celcius = milli_volt / 10;
 
         // Display format: [Tens][Ones][.][C]
-        ssd[0] = digit[(celcius / 10)];   // Tens place
-        ssd[1] = digit[(celcius % 10)];   // Ones place
+        ssd[0] = digit[celcius / 10];   // Tens place
+        ssd[1] = digit[celcius % 10];   // Ones place
         ssd[2] = DOT;                    // Decimal point
         ssd[3] = C;                      // Character 'C'
 

@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V3.10 build 20250813170317 
-                                                                                               Sun Mar 29 11:18:25 2026
+                                                                                               Mon Mar 30 11:08:02 2026
 
 Microchip MPLAB XC8 C Compiler v3.10 (Free license) build 20250813170317 Og1 
      1                           	processor	18F4580
@@ -755,13 +755,13 @@ Microchip MPLAB XC8 C Compiler v3.10 (Free license) build 20250813170317 Og1
    740   000622  E2FC               	bc	u221
    741   000624                     l1027:
    742                           
-   743                           ;main.c: 72:         value = read_adc(6);
+   743                           ;main.c: 71:         value = read_adc(6);
    744   000624  0E06               	movlw	6
    745   000626  EC15  F004         	call	_read_adc
    746   00062A  C001  F016         	movff	?_read_adc,main@value
    747   00062E  C002  F017         	movff	?_read_adc+1,main@value+1
    748   000632                     
-   749                           ;main.c: 76:         milli_volt = value * 4887 / 1000;
+   749                           ;main.c: 74:         milli_volt = value * 4887 / 1000;
    750   000632  0E17               	movlw	23
    751   000634  6E08               	movwf	??_main^0,c
    752   000636  0E13               	movlw	19
@@ -787,7 +787,7 @@ Microchip MPLAB XC8 C Compiler v3.10 (Free license) build 20250813170317 Og1
    772   000668  C001  F018         	movff	?___lwdiv,main@milli_volt
    773   00066C  C002  F019         	movff	?___lwdiv+1,main@milli_volt+1
    774   000670                     
-   775                           ;main.c: 79:         celcius = milli_volt / 10;
+   775                           ;main.c: 76:         celcius = milli_volt / 10;
    776   000670  C018  F001         	movff	main@milli_volt,___lwdiv@dividend
    777   000674  C019  F002         	movff	main@milli_volt+1,___lwdiv@dividend+1
    778   000678  6A04               	clrf	(___lwdiv@divisor+1)^0,c
@@ -797,7 +797,7 @@ Microchip MPLAB XC8 C Compiler v3.10 (Free license) build 20250813170317 Og1
    782   000682  C001  F01E         	movff	?___lwdiv,main@celcius
    783   000686  C002  F01F         	movff	?___lwdiv+1,main@celcius+1
    784   00068A                     
-   785                           ;main.c: 86:         ssd[0] = digit[(celcius / 10)];
+   785                           ;main.c: 83:         ssd[0] = digit[celcius / 10];
    786   00068A  C01E  F001         	movff	main@celcius,___lwdiv@dividend
    787   00068E  C01F  F002         	movff	main@celcius+1,___lwdiv@dividend+1
    788   000692  6A04               	clrf	(___lwdiv@divisor+1)^0,c
@@ -811,7 +811,7 @@ Microchip MPLAB XC8 C Compiler v3.10 (Free license) build 20250813170317 Og1
    796   0006A4  50DF               	movf	indf2,w,c
    797   0006A6  6E1A               	movwf	main@ssd^0,c
    798   0006A8                     
-   799                           ;main.c: 87:         ssd[1] = digit[(celcius % 10)];
+   799                           ;main.c: 84:         ssd[1] = digit[celcius % 10];
    800   0006A8  C01E  F001         	movff	main@celcius,___lwmod@dividend
    801   0006AC  C01F  F002         	movff	main@celcius+1,___lwmod@dividend+1
    802   0006B0  6A04               	clrf	(___lwmod@divisor+1)^0,c
@@ -825,15 +825,15 @@ Microchip MPLAB XC8 C Compiler v3.10 (Free license) build 20250813170317 Og1
    810   0006C2  50DF               	movf	indf2,w,c
    811   0006C4  6E1B               	movwf	(main@ssd+1)^0,c
    812   0006C6                     
-   813                           ;main.c: 88:         ssd[2] = 0x10;
+   813                           ;main.c: 85:         ssd[2] = 0x10;
    814   0006C6  0E10               	movlw	16
    815   0006C8  6E1C               	movwf	(main@ssd+2)^0,c
    816   0006CA                     
-   817                           ;main.c: 89:         ssd[3] = 0xC6;
+   817                           ;main.c: 86:         ssd[3] = 0xC6;
    818   0006CA  0EC6               	movlw	198
    819   0006CC  6E1D               	movwf	(main@ssd+3)^0,c
    820   0006CE                     
-   821                           ;main.c: 91:         display(ssd);
+   821                           ;main.c: 88:         display(ssd);
    822   0006CE  0E1A               	movlw	low main@ssd
    823   0006D0  6E01               	movwf	display@ssd^0,c
    824   0006D2  EC6F  F003         	call	_display	;wreg free
@@ -844,7 +844,7 @@ Microchip MPLAB XC8 C Compiler v3.10 (Free license) build 20250813170317 Og1
    829                           
    830 ;; *************** function _read_adc *****************
    831 ;; Defined at:
-   832 ;;		line 126 in file "main.c"
+   832 ;;		line 123 in file "main.c"
    833 ;; Parameters:    Size  Location     Type
    834 ;;  channel         1    wreg     unsigned char 
    835 ;; Auto vars:     Size  Location     Type
@@ -882,7 +882,7 @@ Microchip MPLAB XC8 C Compiler v3.10 (Free license) build 20250813170317 Og1
    867                           ;read_adc@channel stored from wreg
    868   00082A  6E07               	movwf	read_adc@channel^0,c
    869   00082C                     
-   870                           ;main.c: 128:     unsigned short reg_value;;main.c: 131:     ADCON0 = (ADCON0 & 0XC3) | 
+   870                           ;main.c: 124:     unsigned short reg_value;;main.c: 126:     ADCON0 = (ADCON0 & 0XC3) | 
       +                          (channel << 2);
    871   00082C  C007  F003         	movff	read_adc@channel,??_read_adc
    872   000830  90D8               	bcf	status,0,c
@@ -894,7 +894,7 @@ Microchip MPLAB XC8 C Compiler v3.10 (Free license) build 20250813170317 Og1
    878   00083C  1003               	iorwf	??_read_adc^0,w,c
    879   00083E  6EC2               	movwf	194,c	;volatile
    880   000840                     
-   881                           ;main.c: 133:     GO = 1;
+   881                           ;main.c: 127:     GO = 1;
    882   000840  82C2               	bsf	4034,1,c	;volatile
    883   000842                     l60:
    884   000842  B2C2               	btfsc	4034,1,c	;volatile
@@ -904,7 +904,7 @@ Microchip MPLAB XC8 C Compiler v3.10 (Free license) build 20250813170317 Og1
    888   00084C  EF21  F004         	goto	l60
    889   000850                     u120:
    890   000850                     
-   891                           ;main.c: 138:     reg_value = (ADRESH << 8) | ADRESL;
+   891                           ;main.c: 130:     reg_value = (ADRESH << 8) | ADRESL;
    892   000850  50C3               	movf	195,w,c	;volatile
    893   000852  CFC4 F003          	movff	4036,??_read_adc	;volatile
    894   000856  6A04               	clrf	(??_read_adc+1)^0,c
@@ -915,7 +915,7 @@ Microchip MPLAB XC8 C Compiler v3.10 (Free license) build 20250813170317 Og1
    899   000862  5004               	movf	(??_read_adc+1)^0,w,c
    900   000864  6E06               	movwf	(read_adc@reg_value+1)^0,c
    901   000866                     
-   902                           ;main.c: 140:     return reg_value;
+   902                           ;main.c: 131:     return reg_value;
    903   000866  C005  F001         	movff	read_adc@reg_value,?_read_adc
    904   00086A  C006  F002         	movff	read_adc@reg_value+1,?_read_adc+1
    905   00086E  0012               	return		;funcret
@@ -924,7 +924,7 @@ Microchip MPLAB XC8 C Compiler v3.10 (Free license) build 20250813170317 Og1
    908                           
    909 ;; *************** function _init_adc *****************
    910 ;; Defined at:
-   911 ;;		line 98 in file "main.c"
+   911 ;;		line 95 in file "main.c"
    912 ;; Parameters:    Size  Location     Type
    913 ;;		None
    914 ;; Auto vars:     Size  Location     Type
@@ -957,43 +957,43 @@ Microchip MPLAB XC8 C Compiler v3.10 (Free license) build 20250813170317 Og1
    941   000896                     _init_adc:
    942                           	callstack 30
    943   000896                     
-   944                           ;main.c: 100:     ADFM = 1;
+   944                           ;main.c: 97:     ADFM = 1;
    945   000896  8EC0               	bsf	4032,7,c	;volatile
    946                           
-   947                           ;main.c: 103:     ACQT2 = 1;
+   947                           ;main.c: 100:     ACQT2 = 1;
    948   000898  8AC0               	bsf	4032,5,c	;volatile
    949                           
-   950                           ;main.c: 104:     ACQT1 = 0;
+   950                           ;main.c: 101:     ACQT1 = 0;
    951   00089A  98C0               	bcf	4032,4,c	;volatile
    952                           
-   953                           ;main.c: 105:     ACQT0 = 0;
+   953                           ;main.c: 102:     ACQT0 = 0;
    954   00089C  96C0               	bcf	4032,3,c	;volatile
    955                           
-   956                           ;main.c: 108:     ADCS2 = 0;
+   956                           ;main.c: 105:     ADCS2 = 0;
    957   00089E  94C0               	bcf	4032,2,c	;volatile
    958                           
-   959                           ;main.c: 109:     ADCS1 = 1;
+   959                           ;main.c: 106:     ADCS1 = 1;
    960   0008A0  82C0               	bsf	4032,1,c	;volatile
    961                           
-   962                           ;main.c: 110:     ADCS0 = 0;
+   962                           ;main.c: 107:     ADCS0 = 0;
    963   0008A2  90C0               	bcf	4032,0,c	;volatile
    964                           
-   965                           ;main.c: 112:     GODONE = 0;
+   965                           ;main.c: 109:     GODONE = 0;
    966   0008A4  92C2               	bcf	4034,1,c	;volatile
    967                           
-   968                           ;main.c: 115:     VCFG1 = 0;
+   968                           ;main.c: 112:     VCFG1 = 0;
    969   0008A6  9AC1               	bcf	4033,5,c	;volatile
    970                           
-   971                           ;main.c: 116:     VCFG0 = 0;
+   971                           ;main.c: 113:     VCFG0 = 0;
    972   0008A8  98C1               	bcf	4033,4,c	;volatile
    973                           
-   974                           ;main.c: 119:     ADRESH = 0;
+   974                           ;main.c: 116:     ADRESH = 0;
    975   0008AA  6AC4               	clrf	196,c	;volatile
    976                           
-   977                           ;main.c: 120:     ADRESL = 0;
+   977                           ;main.c: 117:     ADRESL = 0;
    978   0008AC  6AC3               	clrf	195,c	;volatile
    979                           
-   980                           ;main.c: 122:     ADON = 1;
+   980                           ;main.c: 119:     ADON = 1;
    981   0008AE  80C2               	bsf	4034,0,c	;volatile
    982   0008B0  0012               	return		;funcret
    983   0008B2                     __end_of_init_adc:
@@ -1001,7 +1001,7 @@ Microchip MPLAB XC8 C Compiler v3.10 (Free license) build 20250813170317 Og1
    985                           
    986 ;; *************** function _display *****************
    987 ;; Defined at:
-   988 ;;		line 144 in file "main.c"
+   988 ;;		line 135 in file "main.c"
    989 ;; Parameters:    Size  Location     Type
    990 ;;  ssd             1    0[COMRAM] PTR unsigned char 
    991 ;;		 -> main@ssd(4), 
@@ -1036,13 +1036,13 @@ Microchip MPLAB XC8 C Compiler v3.10 (Free license) build 20250813170317 Og1
   1020   0006DE                     _display:
   1021                           	callstack 30
   1022   0006DE                     
-  1023                           ;main.c: 146:     for (int data = 0; data < 4; data++) {
+  1023                           ;main.c: 136:     for (int data = 0; data < 4; data++) {
   1024   0006DE  6A07               	clrf	(display@data+1)^0,c
   1025   0006E0  0E00               	movlw	0
   1026   0006E2  6E06               	movwf	display@data^0,c
   1027   0006E4                     l967:
   1028                           
-  1029                           ;main.c: 148:         PORTD = ssd[data];
+  1029                           ;main.c: 137:         PORTD = ssd[data];
   1030   0006E4  5001               	movf	display@ssd^0,w,c
   1031   0006E6  2406               	addwf	display@data^0,w,c
   1032   0006E8  6ED9               	movwf	fsr2l,c
@@ -1050,7 +1050,7 @@ Microchip MPLAB XC8 C Compiler v3.10 (Free license) build 20250813170317 Og1
   1034   0006EC  50DF               	movf	indf2,w,c
   1035   0006EE  6E83               	movwf	131,c	;volatile
   1036   0006F0                     
-  1037                           ;main.c: 151:         PORTA = (PORTA & 0xF0) | (1 << data);
+  1037                           ;main.c: 139:         PORTA = (PORTA & 0xF0) | (1 << data);
   1038   0006F0  C006  F002         	movff	display@data,??_display
   1039   0006F4  0E01               	movlw	1
   1040   0006F6  6E03               	movwf	(??_display+1)^0,c
@@ -1067,7 +1067,7 @@ Microchip MPLAB XC8 C Compiler v3.10 (Free license) build 20250813170317 Og1
   1051   00070C  1003               	iorwf	(??_display+1)^0,w,c
   1052   00070E  6E80               	movwf	128,c	;volatile
   1053   000710                     
-  1054                           ;main.c: 154:         for (int delay = 1000; delay--;);
+  1054                           ;main.c: 141:         for (int delay = 1000; delay--;);
   1055   000710  0E03               	movlw	3
   1056   000712  6E05               	movwf	(display@delay+1)^0,c
   1057   000714  0EE8               	movlw	232
@@ -1086,7 +1086,7 @@ Microchip MPLAB XC8 C Compiler v3.10 (Free license) build 20250813170317 Og1
   1070   00072E  EF8C  F003         	goto	l973
   1071   000732                     u140:
   1072   000732                     
-  1073                           ;main.c: 155:     }
+  1073                           ;main.c: 142:     }
   1074   000732  4A06               	infsnz	display@data^0,f,c
   1075   000734  2A07               	incf	(display@data+1)^0,f,c
   1076   000736  BE07               	btfsc	(display@data+1)^0,7,c
@@ -1634,7 +1634,7 @@ DATA                 0      0      41      0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V3.10 build 20250813170317 
-Symbol Table                                                                                   Sun Mar 29 11:18:25 2026
+Symbol Table                                                                                   Mon Mar 30 11:08:02 2026
 
       read_adc@reg_value 0005                       l60 0842                       l71 0752  
                      l63 086E                       l57 08B0                       _GO 7E11  

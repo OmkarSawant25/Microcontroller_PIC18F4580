@@ -1,0 +1,46 @@
+/*
+ * File:   main.c
+ * Author: OMKAR SAWANT
+ *
+ * Created on 31 March, 2026, 12:39 PM
+ */
+
+#include <xc.h>
+#include "clcd.h"
+
+#define _XTAL_FREQ 8000000
+
+static void init_config(void) {
+    init_clcd();
+}
+
+void main(void) {
+    init_config();
+    char str[] = "9999999999";
+    char msg[] = "DOWN COUNTER";
+
+    while (1) {
+        str[9]--;
+
+        if (str[9] == '0') {
+            int i = 8;
+            for (; i >= 0; i++) {
+                if (str[i] != '0') {
+                    str[i]--;
+                    break;
+                }
+            }
+            i++;
+            for (; i < 10; i++) {
+                str[i] = '9';
+            }
+        }
+        clcd_print(msg, LINE1(0));
+        clcd_print(str, LINE2(0));
+        __delay_ms(500);
+    }
+
+
+
+    return;
+}

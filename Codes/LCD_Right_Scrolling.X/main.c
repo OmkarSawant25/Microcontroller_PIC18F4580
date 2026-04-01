@@ -33,9 +33,7 @@ void main(void) {
 
     while (1) {
         clcd_print(str, LINE1(0));
-
-        __delay_ms(2000);   // 0.5 Hz (2 sec delay)
-
+        __delay_ms(2000); // 0.5 Hz (2 sec delay)
         // Right scroll
         char last = str[15];
 

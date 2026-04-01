@@ -65,11 +65,11 @@
 [v ___omul __omul `(uo  1 e 8 0 ]
 "51 D:\MC\Codes\Assignment_13.X\main.c
 [v _main main `(v  1 e 1 0 ]
-"98
+"95
 [v _init_adc init_adc `(v  1 e 1 0 ]
-"126
+"123
 [v _read_adc read_adc `(us  1 e 2 0 ]
-"144
+"135
 [v _display display `(v  1 e 1 0 ]
 "25506 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc/pic18f4580.h
 [v _PORTA PORTA `VEuc  1 e 1 @3968 ]
@@ -124,35 +124,35 @@
 [v main@value value `us  1 a 2 21 ]
 "58
 [v main@F10486 F10486 `[10]uc  1 s 10 F10486 ]
-"95
+"92
 } 0
-"126
+"123
 [v _read_adc read_adc `(us  1 e 2 0 ]
 {
 [v read_adc@channel channel `uc  1 p 1 wreg ]
-"128
+"124
 [v read_adc@reg_value reg_value `us  1 a 2 4 ]
-"126
+"123
 [v read_adc@channel channel `uc  1 p 1 wreg ]
-"131
+"126
 [v read_adc@channel channel `uc  1 p 1 6 ]
-"141
+"132
 } 1
-"98
+"95
 [v _init_adc init_adc `(v  1 e 1 0 ]
 {
-"123
+"120
 } 0
-"144
+"135
 [v _display display `(v  1 e 1 0 ]
 {
-"154
+"141
 [v display@delay delay `i  1 a 2 3 ]
-"146
+"136
 [v display@data data `i  1 a 2 5 ]
-"144
+"135
 [v display@ssd ssd `*.30uc  1 p 1 0 ]
-"156
+"143
 } 0
 "7 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\lwmod.c
 [v ___lwmod __lwmod `(ui  1 e 2 0 ]

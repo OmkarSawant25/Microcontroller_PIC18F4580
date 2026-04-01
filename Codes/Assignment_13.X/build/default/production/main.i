@@ -18026,13 +18026,10 @@ void main(void) {
     unsigned int celcius;
 
     while (1) {
-
         value = read_adc(6);
 
 
-
         milli_volt = value * 4887 / 1000;
-
 
         celcius = milli_volt / 10;
 
@@ -18041,8 +18038,8 @@ void main(void) {
 
 
 
-        ssd[0] = digit[(celcius / 10)];
-        ssd[1] = digit[(celcius % 10)];
+        ssd[0] = digit[celcius / 10];
+        ssd[1] = digit[celcius % 10];
         ssd[2] = 0x10;
         ssd[3] = 0xC6;
 
@@ -18082,32 +18079,22 @@ void init_adc() {
 
 
 unsigned short read_adc(unsigned char channel) {
-
     unsigned short reg_value;
 
-
     ADCON0 = (ADCON0 & 0XC3) | (channel << 2);
-
     GO = 1;
-
     while (GO);
 
-
     reg_value = (ADRESH << 8) | ADRESL;
-
     return reg_value;
 }
 
 
 void display(char *ssd) {
-
     for (int data = 0; data < 4; data++) {
-
         PORTD = ssd[data];
 
-
         PORTA = (PORTA & 0xF0) | (1 << data);
-
 
         for (int delay = 1000; delay--;);
     }
